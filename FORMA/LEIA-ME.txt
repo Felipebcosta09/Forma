@@ -1,0 +1,42 @@
+FORMA 2.2 — LOGIN REAL COM SUPABASE
+==================================
+
+ANTES DE PUBLICAR:
+Este pacote NÃO está ligado ao seu Supabase. Você precisa informar a URL e
+uma chave pública do seu próprio projeto, executar o banco.sql e configurar
+as URLs de autenticação. O formulário bloqueará o acesso enquanto faltar
+configuração. Nenhuma senha é armazenada no HTML/JS.
+
+ARQUIVOS:
+- index.html: interface principal
+- styles.css: tema escuro/claro e aparência
+- app.js / extra.js: calendário, treinos, progresso, suplementação
+- cloud.js: cadastro, login, redefinição de senha e sincronização
+- supabase-config.js: URL e chave pública do SEU projeto
+- banco.sql: tabela e políticas de segurança RLS
+- sw.js / manifest.webmanifest / icon-*.png: instalação PWA
+- PASSO-A-PASSO.md: instruções detalhadas
+
+COMECE AQUI:
+1) Abra o arquivo PASSO-A-PASSO.md para a configuração passo a passo.
+2) Faça backup no FORMA 2.1 antes de trocar a versão.
+3) Execute o banco.sql no SQL Editor do Supabase.
+4) Ative Email no Supabase Auth e configure Site URL e Redirect URLs.
+5) Copie a URL do projeto e a chave PUBLISHABLE / ANON para supabase-config.js.
+6) Suba a pasta FORMA inteira no Netlify e teste o cadastro.
+7) Crie uma conta para cada pessoa, usando e-mails distintos e senhas individuais.
+8) Confirme o e-mail quando solicitado, entre e teste a sincronização.
+9) Se quiser os dados anteriores, importe o backup JSON de cada perfil
+   DEPOIS de entrar na conta correta. A importação substitui dados daquela conta.
+
+IMPORTANTE:
+- Supabase PUBLISHABLE/ANON é apropriada para uso público COM RLS ativo.
+- NUNCA coloque a chave SERVICE_ROLE/SECRET em JS público.
+- O código foi testado com um simulador do serviço. A conexão com seu projeto
+  real exige executar os passos acima e testar e-mails, banco e segurança.
+- Não use arquivo file:// para testar e-mail/recuperação/PWA. Use HTTPS.
+- Este projeto ainda está em TESTES; faça backups periódicos.
+- Offline: apenas partes visuais podem abrir sem rede; login e sincronização
+  dependem da internet. Aguarde o indicador "Salvo na nuvem".
+- Não divulgue o endereço do projeto como se fosse privado. A tela de login
+  é pública, mas os dados ficam restritos por usuário pelas políticas RLS.
