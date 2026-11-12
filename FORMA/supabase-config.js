@@ -1,7 +1,9 @@
 /* FORMA — preencha SOMENTE as informações públicas do projeto Supabase.
    Encontre em Supabase > Project Settings > API / Connect.
    Use a chave PUBLISHABLE ou ANON. NUNCA use service_role ou secret. */
+
+/* FORMA — Configuração pública do Supabase */
 window.FORMA_SUPABASE = {
-  url: 'COLE_AQUI_A_URL_DO_PROJETO',
-  publishableKey: 'COLE_AQUI_SUA_CHAVE_PUBLISHABLE_OU_ANON'
+  url: 'https://scspwkgmiqbigcpwupcl.supabase.co',
+  publishableKey: 'sb_publishable_H90rA0cx8_s2Oxi23bCESg_cgugqT8J'
 };
